@@ -13,6 +13,18 @@ function nextSequence() {
 
   gamePattern.push(randomChosenColour);
 
+  // Use jQuery to animate a flash to the button selected 
+
+  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+
+
+
+  // Play the sound for the button colour selected in step 1.
+
+  var audio = new Audio(randomChosenColour + ".mp3");
+  
+  audio.play();
+
   console.log(gamePattern);
 
 };
