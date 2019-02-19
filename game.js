@@ -35,6 +35,22 @@ function playSound (name) {
 
 };
 
+// Add function to animate button that was pressed
+function animatePress(currentColor) {
+
+  
+   $("#" + currentColor).addClass("pressed");
+
+    
+   setTimeout(function () {
+    
+	$("#" + currentColor).removeClass("pressed");
+  
+   }, 100);
+
+}
+;
+
 
 // Add function to define which button was clicked and put consistently it's ids into new array userClickedPattern
 $('.btn').click(function(event){
@@ -48,4 +64,6 @@ $('.btn').click(function(event){
    playSound(userChosenColor);
 
 
+
+   animatePress(userChosenColor);
 });
